@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>activité 4 tic </title>
+    </head>
+    
+<body>
+<header>
+  <img src="https://th.bing.com/th/id/R.c6c4b1327d0659bafd751ec0615d843e?rik=n2uXrZlUpAZuKQ&riu=http%3a%2f%2fseed4na.eu%2fwp-content%2fuploads%2f2020%2f09%2fUSTHB_Logo-768x768.png&ehk=szbhjswzt8kF85iccHPSms332tw6dZ28QAwb1d5HVhY%3d&risl=&pid=ImgRaw&r=0" alt="USTHB University Logo" width="200">
+</header>
+    
+
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #65b4d3; 
+}
+
+header {
+  background-color: #c0e8f8d6;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  max-width: 200px;
+}
+
+
+section {
+  border: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #048eaa, #23509f);
+  border-radius: 10px; 
+  font-size: large;
+  color: #fff;
+}
+
+section h1, section h2, section h3 {
+  margin-top: 0;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+
+section section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #fff;
+}
+
+section section p {
+  margin-bottom: 10px;
+}
+
+
+h2 , h1 {
+  text-align: center;
+
+  color:#c0e8f8d6 ;
+}
+
+#window {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background-color: #8fd4f0e2;
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+
+#window.show {
+  right: 0;
+}
+
+
+#windowBtn {
+  background:linear-gradient(45deg, #048eaa, #23509f);
+  padding: 10px 20px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+
+#windowBtn:focus {
+  outline: none;
+}
+
+#windowBtn:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#windowBtn:active {
+  background-color: #2df3e9;
+}
+
+#windowBtn:focus + #window {
+  display: block;
+}
+#windowBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#closeBtn{
+  color: #3352b4;
+}
+</style>
+
+<nav>
+  <button id="windowBtn" onclick="toggleMenu()">Les Information des etudiants</button>
+</nav>
+<div id="window">
+  <button id="closeBtn" onclick="toggleMenu()">X</button>
+  <ul>
+    <li>
+        <u>Matricule:</u> 212133046065 <br>
+        <u>NOM:</u> Yessaad <br>
+        <u>PRENOM:</u> Tamim Sohaib<br>
+        <u>Section 01 MI</u> <br>
+        <u>GROUPE:</u> 3<br>
+    </li>
+    <br>
+    <li>
+      <u>Matricule:</u> 212133047811 <br>
+      <u>NOM:</u> Fekarcha <br>
+      <u>PRENOM:</u> Aymen<br>
+      <u>Section 01 MI</u> <br>
+      <u>GROUPE:</u> 3<br>
+    </li>
+    <br>
+    <li>
+      <u>Matricule:</u> 212134072269 <br>
+      <u>NOM:</u> Merbouche <br>
+      <u>PRENOM:</u> Abdelatif<br>
+      <u>Section 01 MI</u> <br>
+      <u>GROUPE:</u> 1<br>
+    </li>
+    <br>
+    <li>
+      <u>Matricule:</u> 212135077910 <br>
+      <u>NOM:</u> Laib <br>
+      <u>PRENOM:</u> Mohamed<br>
+      <u>Section 01 MI</u> <br>
+      <u>GROUPE:</u> 4<br>
+    </li>
+    <br>
+    <li>
+      <u>Matricule:</u> 212132056818 <br>
+      <u>NOM:</u> Benreskallah <br>
+      <u>PRENOM:</u> Younes<br>
+      <u>Section 01 MI</u> <br>
+      <u>GROUPE:</u> 3<br>
+    </li>
+    <br>
+    <li>
+      <u>Matricule:</u> 212131016149 <br>
+      <u>NOM:</u> Boundaoui <br>
+      <u>PRENOM:</u> Kenza<br>
+      <u>Section 01 MI</u> <br>
+      <u>GROUPE:</u> 4<br>
+    </li>
+    <br>
+    <li>
+      <u>Matricule:</u> 212139089106 <br>
+      <u>NOM:</u> Fartas <br>
+      <u>PRENOM:</u> Nadir<br>
+      <u>Section 01 MI</u> <br>
+      <u>GROUPE:</u> 1<br>
+    </li>
+    <br>
+    <li>
+      <u>Matricule:</u> 212132003882 <br>
+      <u>NOM:</u> Kermouche <br>
+      <u>PRENOM:</u> Bilal<br>
+      <u>Section 01 MI</u> <br>
+      <u>GROUPE:</u> 2<br>
+    </li>
+      <br>
+      <li>
+          <u>Matricule:</u> 212131021202 <br>
+          <u>NOM:</u> Si salem <br>
+          <u>PRENOM:</u> Lina<br>
+          <u>Section 01 MI</u> <br>
+          <u>GROUPE:</u> 4<br>
+      </li>
+            <li>
+          <u>Matricule:</u> 212131012824 <br>
+          <u>NOM:</u> Benaoudia <br>
+          <u>PRENOM:</u> Asma<br>
+          <u>Section 01 MI</u> <br>
+          <u>GROUPE:</u> 4<br>
+      </li>
+  </ul>
+</div>
+<script>
+  function toggleMenu() {
+    var window = document.getElementById("window");
+    if (window.style.display === "block") {
+      window.classList.toggle("show");
+    } else {
+      window.style.display = "block";
+    }
+  }
+</script>
+
+
+<section>
+  <h1>Activite 04</h1>
+</section>
+
+
+<section>
+  <h2>Résumé du chapitre 1 </h2>
+  <section>
+    <p>Les techniques de l’information et de la communication (TIC) regroupent l'ensemble des outils (matériels et logiciels) mis en place. La naissance des TIC est en raison de la convergence de l'informatique, des télécommunications, des électroniques et de l'audiovisuel. Les TIC est présentées dans 3 grandes catégories :  Internet, serveurs, réseaux, dépannage...</p>
+    <p>La connectivité : permettre à plusieurs types d’ordinateurs.</p>
+    <p> La modularité : utiliser un ensemble restreint de L'intensité : on peut transmettre and recevoir des informations dans n’importe quel  temps, ni de n'importe quelle régionale mais internationale grâce au tissu mondial de l'information. Le langage est une forme de langage utilisé pour communiquer avec l’utilisateur.</p>
+    <p>L’intensité : la transmission et reconvoyer des données vers les réseaux (PC, Mac, SUN Terminal X, …) ordinateur, tablette interactive, téléphones portables, les robots, Le récepteur reçoit les signaux et reconstruit le message.</p>
+    <p>La communication est un outil indispensable pour tout organisme. La communication institutionnelle (corporatif) consiste à communiquer sur l'image de l’entreprise ou de l.a. lorre de la publicité. La communication de masse est par exemple celle de publicité. La communication interpersonnelle sera employée lorsque vous adressez tous vos. Adressez to vos salariés, un manager à son équipe ou bien lors de réunions.</p>
+    <p>La radiodiffusion, câblée ou par satellite (télévision) or La projection cinématographique (film, documentaire, publicité) or Le réseau Internet (sites d’information, de propagande, spams) or the Internet. Multimédia : ensemble, des techniques et des produits permettent l’utilisation.</p>
+  </section>
+
+</section>
+
+<section>
+  <h2>Résumé du chapitre 2 </h2>
+  <section>
+   <h3> Réseau(informatique) network :</h3>
+    <p> Un réseau informatique est un ensemble d'ordinateurs et de périphériques autonomes
+    connectés entre eux, situés dans une même zone géographique, qui échangent des
+    informations numériques selon des règles définies. La mise en réseau, également appelée
+    "Networking", consiste à utiliser des outils et des tâches pour connecter les ordinateurs
+    afin qu'ils puissent partager des ressources.</p>
+    <p> Un réseau permet la communication de données entre différentes applications, peu importe
+    la distance qui les sépare. Les réseaux informatiques ont évolué à partir du besoin de faire
+
+    communiquer des terminaux distants avec un site central, puis entre des ordinateurs eux-
+    mêmes. Initialement, ces communications étaient principalement axées sur le transfert de
+
+    données, mais aujourd'hui, les réseaux intègrent également la voix et la vidéo.</p>
+
+    <u> Un réseau repose sur deux concepts fondamentaux :</u> <br>
+    • L’interconnexion : qui assure la transmission des données d'un nœud (extrémité
+    d'une connexion) à un autre.<br>
+    • La communication : qui permet l'échange de données entre les processus (les
+    programmes en cours d'exécution) au sein du réseau informatique.<br>
+
+    Les caractéristiques de base d’un réseau :<br>
+    <p>Les caractéristiques essentielles d'un réseau incluent sa topologie physique et logique, son
+    débit de transmission, sa distance maximale de portée et le nombre maximum de nœuds
+    interconnectables.</p><br>
+    Quelques terminologies en réseau :<br>
+    En réseau, vous rencontrerez des termes tels que station de : travail, nœud, paquet, réseaux
+    homogènes, réseaux hétérogènes et débit. Comprendre ces termes vous aidera à mieux
+    appréhender le fonctionnement et la communication au sein des réseaux informatiques.<br>
+    Eléments d’un réseau :<br>
+    Les éléments essentiels d'un réseau comprennent : Les éléments d'un réseau comprennent
+    les ordinateurs connectés au réseau, les logiciels nécessaires pour accéder aux services du
+    réseau, les supports de transmission utilisés pour le transfert des données, tels que les
+    câbles et les connexions sans fil, ainsi que les équipements d'interconnexion, tels que les
+    répéteurs, les concentrateurs, les commutateurs et les routeurs, qui facilitent la
+    communication entre les appareils du réseau.<br>
+
+    <h3> Classification des réseaux :</h3>
+    Les réseaux peuvent être classés selon différents critères :<br>
+    Par portée (distance) :<br>
+    Ils peuvent être des réseaux locaux (LAN), métropolitains (MAN) ou étendus (WAN)
+    L'ouverture (utilisation) : En interne (intranet), en externe (extranet) ou à l'échelle
+    mondiale (internet),<br>
+    Les supports de connexion :<br>
+    • Réseaux filaires : utilisant des câbles tels que le coaxial, les paires torsadées, la fibre
+    optique et les lignes téléphoniques.<br>
+    • Réseaux sans fil : basés sur des moyens tels que les ondes radio, les ondes
+    infrarouges, les satellites et le Bluetooth.<br>
+    Le type d'organisation :<br>
+    - Peer to Peer : chaque ordinateur est à la fois serveur et client, permettant le partage des
+    ressources.<br>
+    - Client/serveur : la plupart des stations sont des postes clients et quelques-unes sont
+    dédiées à des tâches spécialisées en tant que serveurs. Ce type de réseau est géré par un
+    administrateur.<br>
+    <h3> Différents types de topologies : </h3>
+    Les types principaux de topologies de réseau sont le bus, l'étoile, l'anneau et la topologie
+    maillée. Chacune présente des caractéristiques spécifiques et le choix de la topologie
+    dépend des besoins, des contraintes et de la taille du réseau.
+  </section>
+</section>
+
+<section>
+  <h2> Résumé du chapitre 3 </h2>
+  <section>
+    <h3> Les composants matériel d'un réseau informatique : </h3>
+    <p> Les composants matériels d'un réseau informatique comprennent les cartes réseau, les
+    switches et les hubs : les cartes réseau permettent la connexion d'un ordinateur à un réseau,
+    les switches facilitent la communication sélective entre les appareils, tandis que les hubs
+    transmettent les données à tous les appareils connectés.</p>
+    <p>Les switches sont généralement préférés aux hubs en raison de leurs fonctionnalités
+    avancées et de leur meilleure gestion du trafic réseau.</p>
+    <h3>Le modèle OSI:</h3>
+    Le modèle OSI (Open Systems Interconnection) est un modèle de référence qui divise les
+    communications en réseau en sept couches distinctes. Chaque couche a des fonctions
+    spécifiques pour assurer la communication entre les appareils du réseau. Les sept couches
+    du modèle OSI sont :<br>
+    • Couche physique : transmission des données sur le support physique.<br>
+    • Couche liaison de données : transmission des données entre les appareils
+    partageant le même support physique.<br>
+    • Couche réseau : routage des données à travers le réseau.<br>
+    • Couche transport : acheminement des données de bout en bout entre les appareils.<br>
+    • Couche session : établissement et gestion des sessions entre les appareils.<br>
+    • Couche présentation : conversion des données dans un format compréhensible par
+    l'appareil de destination.<br>
+    • Couche application : communication entre les applications sur les appareils du
+    réseau.<br>
+    <h3> Le modèle TCP/IP:</h3>
+    Le modèle TCP/IP (Transmission Control Protocol/Internet Protocol) est un modèle de
+    référence utilisé dans la conception et la mise en œuvre des réseaux informatiques
+    modernes. Contrairement au modèle OSI, qui comprend sept couches distinctes, le modèle
+    TCP/IP se compose de quatre couches principales :<br>
+    • Couche liaison de données : responsable de la transmission des données sur le
+    support physique.<br>
+    • Couche réseau : chargée du routage des données à travers le réseau.<br>
+    • Couche transport : assure l'acheminement des données de bout en bout entre les
+    appareils.<br>
+    • Couche application : facilite la communication entre les applications sur les
+    appareils du réseau.<br>
+    Le modèle TCP/IP est utilisé par les protocoles de communication réseau les plus
+    répandus, tels que le protocole Internet (IP), le protocole de contrôle de transmission
+    (TCP) et le protocole de datagramme utilisateur (UDP). Il sert de base pour la conception
+    et la mise en place de réseaux d'entreprise, d'Internet et de réseaux sans fil.<br>
+
+    <h3>L'adressage:</h3>
+    l'adressage IP est un élément fondamental des réseaux informatiques qui permet
+    l'identification unique des dispositifs et facilite la transmission des données entre eux.
+    IPV4 et IPV6 sont deux versions d'adressage IP couramment utilisées, chacune ayant ses
+    propres spécifications et représentations.<br>
+    <h3> L'adresse IPV4:</h3>
+    l'adresse IPV4 est divisée en deux parties : l'adresse réseau et l'adresse hôte.<br>
+    Les adresses réseau ont tous les bits de la partie hôte définis à 0, les adresses de diffusion
+    ont tous les bits de la partie hôte définis à 1, et les adresses hôtes sont attribuées aux
+    machines situées sur le réseau entre l'adresse réseau et l'adresse de diffusion. Le masque de
+    réseau et de sous-réseaux est utilisé pour déterminer les parties réseau et hôte d'une adresse
+    IP.
+  </section>
+</section>
+
+<section>
+  <h2>Résumé du chapitre 4 </h2>
+  <section>
+    Le World Wide Web (WWW) est un système hypertexte public sur Internet qui permet<br>
+    d’accéder à des documents par un mécanisme d’hyperlien.<br>
+    Les trois mécanismes de base du Web sont :<br>
+    <ol>
+    <li> l’URL (Uniform Resource Locator)</li>
+    <li>le protocole HTTP (Hypertext Transfer Protocol)</li>
+    <li>le langage HTML (HyperText Markup Language).</li>
+    </ol><br>
+    - Une page Web est un document multimédia qui est décrit à l’aide de HTML et qui est
+    affiché par un navigateur.<br>
+    - Un site Web est un ensemble des pages Web liées par hypertexte, émanant de la même
+    entité, et généralement situées sur le même serveur.<br>
+    - Un document html est construis par des balises HTML qui sont utilisées pour structurer le
+    contenu d’une page web. telles que &lt;html&gt;,&lt;head&gt;,&lt;title&gt;,&lt;body&gt; et &lt;p&gt; .
+  </section>
+</section>
+
+<section>
+  <h2>Résumé du chapitre 5 </h2>
+  <section>
+      <p> Dans ce chapitre, Git et GitHub sont définis pour éviter toute confusion, et la popularité de Git ainsi que
+      l&#39;importance des systèmes de contrôle de version sont discutées. Git est un logiciel de versionnèrent
+      créé en 2005 par Linus Torvalds, le créateur de Linux, et il est le leader incontesté parmi les systèmes de
+      contrôle de version. Le logiciel de contrôle de version permet de garder une trace des modifications
+      apportées à un projet pour identifier rapidement et revenir à une version antérieure en cas de
+      problèmes. Un tel logiciel est essentiel pour une gestion de projet et une collaboration efficace.</p>
+      <p> Deux modèles de systèmes de contrôle de version sont décrits : le modèle centralisé et le modèle
+      décentralisé, également appelé modèle distribué. Dans le modèle centralisé, le code source du projet est
+      hébergé sur un serveur distant central, et les utilisateurs doivent s&#39;y connecter pour travailler sur le
+      code. Dans le modèle distribué, chaque utilisateur télécharge et héberge l&#39;ensemble du code source du
+      projet sur sa machine, ce qui lui permet de travailler sans connexion constante à un serveur central. Git a
+      popularisé le modèle distribué, offrant simplicité, flexibilité, sécurité et la possibilité d&#39;utiliser la copie du
+      projet d&#39;un utilisateur comme sauvegarde en cas de corruption du serveur.</p>
+       1. Utilisation de Git : Ligne de commande, console et interface graphique
+          <p>Il existe différents types d&#39;interfaces qui peuvent être utilisées pour installer et utiliser Git. Dans ce
+      cours, nous utiliserons l&#39;interface en ligne de commande plutôt qu&#39;une interface graphique. Nous
+      avons fait ce choix pour plusieurs raisons :</p>
+       L&#39;utilisation de la ligne de commande est le seul moyen d&#39;accéder à toutes les commandes de
+      Git ;<br>
+       Tout le monde aura accès aux mêmes commandes en utilisant la ligne de commande, ce qui
+      signifie que tout le monde peut suivre le cours de la même manière ;<br>
+       Si vous savez comment utiliser la version en ligne de commande, vous saurez comment utiliser
+      n&#39;importe quelle autre interface graphique.<br>
+      Sous Windows, pour ouvrir la ligne de commande :<br>
+       Raccourci : win + R + cmd<br>
+       Dans la barre de recherche, recherchez cmd.<br>
+      1) Installation de Git<br>
+          <p>La manière la plus facile d&#39;installer Git est de télécharger la dernière version depuis le site officiel
+      http://git-scm.com/downloads, d&#39;ouvrir le fichier téléchargé et de suivre les instructions à l&#39;écran
+      en laissant toutes les valeurs par défaut.</p>
+      2) Configuration de Git<br>
+          <p>Une fois que Git est installé, nous allons configurer le logiciel pour enregistrer certaines données
+      afin que nous n&#39;ayons pas à les fournir à nouveau plus tard. Nous allons, par exemple, fournir un
+      nom d&#39;utilisateur et une adresse e-mail que Git utilisera plus tard.
+      Pour cela, nous utiliserons notre première commande Git, qui est la commande git config. Cette
+      commande nous permet de visualiser et de modifier les variables de configuration qui contrôlent
+      tous les aspects de l&#39;apparence et du comportement de Git.</p>
+
+          <p>Nous passerons également une option --global à notre commande. Les options permettent de
+      personnaliser le comportement par défaut de certaines commandes. Ici, l&#39;option --global nous
+      permettra d&#39;indiquer à Git que le nom d&#39;utilisateur et l&#39;adresse e-mail fournis doivent être
+      utilisés globalement (c&#39;est-à-dire pour n&#39;importe quel projet Git).<br>
+      Nous entrerons donc les commandes suivantes : git config --global user.name &quot;Bouchekir
+      Redouane&quot; et git config --global user.email redouane.bouchekir@gmail.com l&#39;une après l&#39;autre
+      pour fournir un nom et une adresse e-mail. Bien sûr, utilisez votre propre nom et adresse e-mail.<br>
+      Pour vous assurer que vos informations ont été enregistrées, vous pouvez entrer git config
+      user.name et git config user.email. Les informations saisies doivent être retournées.</p>
+      3) Démarrage d&#39;un dépôt Git<br>
+          <p>Un &quot;dépôt&quot; dans Git fait référence à l&#39;importation et la copie de tous les fichiers d&#39;un projet dans
+      Git. Il existe deux façons de créer un dépôt Git : importer un répertoire existant dans Git ou
+      cloner un dépôt Git existant.</p>
+      4) Gestion des informations dans Git<br>
+          <p>Git gère les données d&#39;une manière différente de la plupart des autres systèmes de contrôle de
+      version. Git considère les données comme un flux de snapshots. Chaque fois qu&#39;un état du projet
+      est validé dans Git, il prend un instantané du contenu de l&#39;espace de travail et enregistre une
+      référence à l&#39;instantané pour qu&#39;il puisse être accédé ultérieurement. Chaque instantané est
+      stocké dans une base de données locale sur notre machine.<br>
+      Avoir un historique complet du projet localement signifie que la plupart des opérations Git
+      peuvent être effectuées localement sans avoir à être connecté à un serveur distant central. Cela
+      rend les opérations plus rapides et le travail plus agréable en général.</p>
+      5) États des fichiers<br>
+          <p>Comment Git suit-il les modifications apportées aux fichiers d&#39;un projet ? Pour comprendre cela,
+      il est essentiel de savoir qu&#39;un fichier peut avoir deux états majeurs dans Git : suivi ou non suivi.<br>
+      Un fichier est &quot;suivi&quot; s&#39;il faisait partie de la dernière capture d&#39;écran réalisée par Git, ce qui
+      signifie qu&#39;il est enregistré dans la base de données. Tout fichier qui n&#39;a pas été indexé et qui
+      n&#39;était pas inclus dans la dernière capture d&#39;écran est &quot;non suivi&quot;. <br>
+
+      Lorsque l&#39;on commence un référentiel Git en important un répertoire existant de notre machine,
+      tous les fichiers sont initialement non suivis. Par conséquent, nous devons dire à Git de les
+      indexer et de les valider (les enregistrer dans la base de données). Lorsque l&#39;on clone un
+      référentiel Git existant, c&#39;est différent car nous copions l&#39;historique complet du projet et les
+      fichiers sont déjà suivis par défaut.<br>
+
+      De plus, chaque fichier suivi peut avoir l&#39;un des trois états suivants :<br>
+       Modifié (&quot;modified&quot;)<br>
+       Stagé (&quot;staged&quot;)<br>
+       Validé (&quot;committed&quot;)<br>
+      Lorsque l&#39;on commence un référentiel Git à partir d&#39;un référentiel local, nous demandons à Git
+      de valider tous les fichiers du projet. Un fichier est &quot;validé&quot; lorsqu&#39;il est enregistré dans la base
+      de données locale. Lorsque l&#39;on clone un référentiel existant, les fichiers sont enregistrés dans la
+      base de données par défaut.<br>
+      Lorsque l&#39;on travaille sur un projet, nous pouvons ajouter de nouveaux fichiers ou modifier ceux
+      qui existent. Les fichiers modifiés sont considérés comme &quot;modifiés&quot; par Git jusqu&#39;à ce qu&#39;ils
+      soient stagés. Nous stagons un fichier en disant à Git que le fichier modifié ou nouveau doit faire
+      partie de la prochaine capture d&#39;écran dans sa version actuelle. Enfin, lorsque nous demandons à
+      Git de prendre la capture d&#39;écran, c&#39;est-à-dire d&#39;enregistrer l&#39;état actuel du projet (c&#39;est-à-dire
+      tous les fichiers stagés et non modifiés), les fichiers de la capture d&#39;écran sont à nouveau
+      considérés comme &quot;validés&quot; et le cycle recommence.</p>
+      6) Zones de travail <br>
+          <p>Les états des fichiers sont liés aux zones de travail dans Git. Selon leur état, un fichier peut
+      apparaître dans une zone de travail spécifique. Chaque projet Git est composé de trois sections :<br>
+      le répertoire de travail, l&#39;aire de préparation et le répertoire Git.<br>
+      Le répertoire de travail ou &quot;arborescence de travail&quot; correspond à une extraction unique
+      (&quot;checkout&quot;) d&#39;une version de projet. Les fichiers sont extraits de la base de données compressée
+      située dans le répertoire Git et sont placés sur le disque pour être utilisés ou modifiés.<br>
+      L&#39;aire de préparation ou &quot;index&quot; correspond à un simple fichier, généralement situé dans le
+      répertoire Git, qui stocke des informations sur ce qui fera partie de la prochaine capture d&#39;écran
+      ou &quot;commit&quot;.<br>
+      Le répertoire Git est l&#39;endroit où Git stocke les métadonnées et la base de données d&#39;objets de
+      votre projet. C&#39;est la partie principale ou le cœur de Git.<br>
+      Le processus de flux de travail est le suivant : nous travaillerons sur nos fichiers dans le
+      répertoire de travail. Lorsque nous modifions ou créons un fichier, nous pouvons ensuite choisir
+      de le mettre en préparation. Tant qu&#39;un fichier n&#39;est pas mis en préparation, il a l&#39;état modifié ou
+      est non suivi s&#39;il s&#39;agit d&#39;un nouveau fichier. Une fois qu&#39;il est mis en préparation, c&#39;est-à-dire que
+      son nom est ajouté à l&#39;aire de préparation, il a l&#39;état mis en préparation. Enfin, nous validerons
+      (&quot;commit&quot;) la version préparée de nos fichiers pour les ajouter au répertoire Git.</p>
+      7) Créer un dépôt Git à partir d&#39;un répertoire existant <br>
+          <p>Lorsque nous commençons avec Git, nous avons souvent déjà des projets en cours stockés
+      localement sur notre machine ou sur un serveur distant pour lesquels nous aimerions
+      implémenter un système de contrôle de version. <br>
+
+      Dans ce cas, nous pouvons importer toutes les ressources d&#39;un projet dans Git. Pour le reste de
+      cette leçon, je vais créer un répertoire &quot;git-projet&quot; situé sur mon bureau et contenant deux
+      fichiers texte vides &quot;file1.txt&quot; et &quot;README.txt&quot;. Ce répertoire servira de base pour les exemples
+      qui suivront (ce sera le répertoire importé).<br>
+      Remarque : Dans cmd, les commandes :<br>
+       cd &lt;chemin&gt; : vous permet de vous positionner à un emplacement dans le PC, c&#39;est-à-
+      dire de vous placer dans un répertoire.<br>
+       dir : vous permet d&#39;afficher la liste des dossiers et des fichiers dans l&#39;emplacement
+      actuel.<br>
+      Pour initialiser un dépôt Git, nous utilisons ensuite la commande git init. Cela crée un sous-
+      répertoire .git contenant un ensemble de fichiers qui permettront à un dépôt Git de fonctionner.
+      Lorsque nous utilisons git init, Git nous renvoie un message nous informant que le dépôt Git a
+      été initialisé et qu&#39;il est vide. C&#39;est parfaitement normal car nous n&#39;avons pas encore versionné
+      de fichiers (nous n&#39;avons pas ajouté de fichiers du répertoire à la base de données).<br>
+      Nous pouvons utiliser la commande &quot;git status&quot; ici pour déterminer l&#39;état des fichiers dans notre
+      répertoire. Cette commande est extrêmement utile et c&#39;est celle que j&#39;utilise personnellement le
+      plus souvent.<br>
+      Ici, &quot;git status&quot; nous informe que notre projet a deux fichiers qui ne sont pas sous contrôle de
+      version (&quot;non suivis&quot;) et ce sont les fichiers &quot;README.txt&quot; et &quot;file1.txt&quot;. Il nous indique
+      également que aucun fichier n&#39;a été validé (&quot;commit&quot;) dans la base de données pour le moment,
+      ni ajouté pour validation. La commande &quot;git status&quot; nous informe également sur la branche sur
+      laquelle nous sommes (&quot;master&quot; ici). Nous parlerons des branches plus tard.<br>
+      La prochaine étape sera de mettre en stage nos fichiers afin qu&#39;ils puissent être validés, c&#39;est-à-
+      dire ajoutés à la base de données et que nous puissions ainsi avoir une première historique de
+      version.<br>
+      Pour mettre en stage des fichiers, nous utilisons la commande &quot;git add&quot;. Nous pouvons lui passer
+      un nom de fichier pour mettre en stage le fichier en question, le nom d&#39;un répertoire pour
+      mettre en stage tous les fichiers du répertoire en une seule fois, ou un &quot;fileglob&quot; pour ajouter
+      tous les fichiers correspondant au modèle fourni.<br>
+      Les &quot;fileglobs&quot; utilisent les extensions de chemin de fichier. Cela signifie que certains caractères
+      comme * et ? auront une signification spéciale et nous permettront de créer des modèles de
+      correspondance. Le caractère *.</p>
+      8) Clonez un dépôt Git <br>
+          <p>La deuxième façon de démarrer un dépôt Git est de cloner localement un dépôt Git existant.
+      Pour ce faire, nous utilisons la commande &quot;git clone&quot;. Créez un dépôt sur GitHub. Maintenant
+      que vous avez créé votre dépôt sur GitHub, vous pouvez transférer nos fichiers vers ce dépôt. Si
+      nous vérifions notre dépôt sur GitHub, nous pouvons voir les deux fichiers.</p>
+
+      9) Ajouter ou modifier des fichiers dans un projet et mettre à jour notre dépôt Git
+          <p>À ce stade, nous avons d&#39;une part notre projet contenant un ensemble de fichiers et de
+      ressources sur lesquels nous travaillons, et d&#39;autre part, un dépôt Git qui est utilisé pour gérer les
+      différentes versions de notre projet. Au fur et à mesure que nous continuons à travailler sur
+      notre projet, nous ajouterons, modifierons et même supprimerons des fichiers. Nous
+      indiquerons toutes ces modifications à Git afin qu&#39;il puisse garder une historique des versions
+      que nous pourrons consulter ultérieurement pour revenir à un état précédent du projet (en cas
+      de bug, par exemple, ou si une modification ne donne pas le résultat souhaité). Chaque fois que
+      nous voulons enregistrer une modification de fichier ou ajouter un fichier au dépôt Git, nous
+      devrons utiliser les commandes &quot;git add&quot; et &quot;git commit&quot; comme nous l&#39;avons fait dans la leçon
+      précédente. Ici, je attire votre attention sur un point important : le commit
+      (validation/enregistrement dans la base de données) d&#39;un fichier sera basé sur l&#39;état de ce fichier
+      au moment de &quot;git add&quot;. Cela signifie que si vous effectuez une commande &quot;git add&quot; sur un
+      fichier, puis modifiez à nouveau le fichier et effectuez ensuite un &quot;git commit&quot;, Il s&#39;agit du fichier
+      dans son état au moment du dernier git add qui sera validé, et les dernières modifications ne
+      seront pas enregistrées dans le dépôt Git. Si vous souhaitez toujours enregistrer la dernière
+      version d&#39;un fichier, assurez-vous de toujours effectuer un git add juste avant un git commit.
+      Pour ajouter les fichiers modifiés qui sont déjà suivis dans la zone d&#39;index et les valider, vous
+      pouvez également utiliser git commit avec une option -a comme ceci : git commit -a. Cela vous
+      dispense d&#39;avoir à taper git add.</p>
+      10) Consulter l&#39;historique des modifications Git <br>
+          <p>La façon la plus facile de consulter l&#39;historique des modifications Git est d&#39;utiliser la commande
+      git log. Cette commande affiche la liste des commits effectués du plus récent au plus ancien. Par
+      défaut, chaque commit est affiché avec son checksum SHA-1, le nom et l&#39;adresse e-mail de
+      l&#39;auteur, la date et le message de commit.</p>
+      11) Annuler les modifications apportées à un fichier<br>
+          <p>L&#39;un des principaux avantages de l&#39;utilisation d&#39;un logiciel de contrôle de version est la capacité à
+      &quot;revenir en arrière&quot;, c&#39;est-à-dire à pouvoir retourner à un état précédemment enregistré d&#39;un
+      projet. Après un commit, nous continuerons à travailler sur nos fichiers et à les modifier. Parfois,
+      certaines modifications ne donneront pas les résultats escomptés, et nous voudrons revenir à
+      l&#39;état du fichier de la dernière capture Git (c&#39;est-à-dire le dernier état enregistré). Nous pouvons
+      le faire avec la commande générale git checkout -- nomdufichier ou la nouvelle commande
+      spécialisée git restore.</p>
+      2. Qu&#39;est-ce qu&#39;une branche ?<br>
+       Une branche dans Git est un pointeur vers un commit, elle permet de créer une copie virtuelle du
+      projet pour y travailler sans affecter la branche principale. Git utilise des pointeurs simples pour
+      représenter les branches, facilitant ainsi leur création et leur fusion.<br>
+       Lorsqu&#39;un commit est effectué, Git stocke les informations dans un objet de commit, qui est ensuite
+      référencé par la branche.<br>
+       Les branches sont un moyen efficace de travailler sur différentes fonctionnalités du projet en
+      parallèle.<br>
+  </section>
+</section>
+
+
+</body>
+
+</html>
